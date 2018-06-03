@@ -13,8 +13,15 @@ body {
     padding: 2rem;
 }
 
-.bg {
+.bgb {
     color: aqua;
+}
+
+.bgr {
+    color: yellow;
+}
+
+.bgb, .bgr {
     margin-top: auto;
     margin-bottom: auto;
     padding: 1.8em;
@@ -82,6 +89,22 @@ body {
 }
 
 .overlay-u {
+    position: fixed;
+    display: none;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: black;
+    z-index: 2;
+    cursor: pointer;
+    border-radius: 12px;
+}
+
+
+.overlay {
     position: fixed;
     display: none;
     width: 100%;
