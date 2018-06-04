@@ -63,16 +63,17 @@ function match(target) {
         myScore.innerHTML = `</h4>Score = </h4> + ${score}`;
         header.appendChild(myScore);
 
-        if(score === 80) {
-            finish();
-        }
-
         console.log(target.className);
         target.className = 'overlay-u';
         let act = document.querySelectorAll('.overlay-u');
         for( let i=0; i< act.length; i++) {
             act[i].className = 'overlay';
         }
+        
+        if(score === 80) {
+            finish();
+        }
+
         console.log(target.className);
         return;
     }
@@ -86,6 +87,9 @@ function off() {
     for( let i = 0; i < active.length; i++) {
         active[i].className = 'overlay-a';
     }
+
+    active[0].style.cssText = 'animation-name: wrong; animation-duration: .8s';
+    // document.body.style.cssText = 'animation-name: wrongb; animation-duration: .8s';
 }
 
 
